@@ -90,6 +90,17 @@ _build/
 
 # python-dotenv
 .env
+.venv
 
 # setuptools-scm/
 src/*/_version.py
+
+# files
+*.shx
+*.cpg
+*.prj
+*.dbf
+*.sbn
+*.sbx
+*.shp
+*.shp.xml
