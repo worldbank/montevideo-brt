@@ -16,15 +16,16 @@ jobs:
           cache: "pip"
       - name: Install Dependencies
         run: |
-          pip install jupyter-book
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f pyproject.toml ]; then pip install ".[docs]"; fi
       - name: Build Juputer Book Documentation
         run: |
-          jupyter-book build docs/
+          jupyter-book build . --config docs/_config.yml --toc docs/_toc.yml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && job.status == 'success'
         with:
-          path: "docs/_build/html"
+          path: "_build/html"
 
   deploy-book:
     needs: build-book
