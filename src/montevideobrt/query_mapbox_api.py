@@ -45,7 +45,7 @@ class Mapbox():
         
         return response
     
-def retrieve_date_time(city):
+def retrieve_date_time():
     '''
     Return current date and time in UTC timezone as strings (year, month, day, hour, minute)
     '''
@@ -57,12 +57,12 @@ def retrieve_date_time(city):
     minute = str(now.minute).zfill(2)
     return year, month, day, hour, minute
 
-def query_ods():
+def query_ods(city):
     '''Query Mapbox API for each OD pair in the ODs file and save results in a new CSV file'''
 
     with open("config.yaml", "r") as file:
         config = yaml.safe_load(file)
-    
+
     token = os.getenv(config['Montevideo']['mapbox_token_env_var'])
     method = config['Montevideo']['method']
     profile = config['Montevideo']['profile']
@@ -105,11 +105,12 @@ def query_ods():
         ods.loc[od_id, f'flipped_dist_{year}{month}{day}{hour}{minute}'] = sum(distance_do)
     ods.to_csv(f'../../results/mapbox_matrixapi_{year}{month}{day}{hour}{minute}.csv') 
 
-    if __name__ == "__main__":
-        parser = argparse.ArgumentParser()
-        parser.add_argument('-c', '--city', type=str, help="City name for which to query Mapbox API, saved in the config file")
-        
-        args = parser.parse_args()
-        city = args.city
-        
-        query_ods(city)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-c', '--city', type=str, help="City name for which to query Mapbox API, saved in the config file")
+    
+    args = parser.parse_args()
+    city = args.city
+
+
+    query_ods(city)

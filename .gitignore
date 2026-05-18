@@ -104,3 +104,5 @@ src/*/_version.py
 *.sbx
 *.shp
 *.shp.xml
+*.csv
+
