@@ -19,7 +19,7 @@ jobs:
           pip install jupyter-book
       - name: Build Juputer Book Documentation
         run: |
-          jupyter-book build . --config docs/_config.yml --toc docs/_toc.yml
+          jupyter-book build docs/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && job.status == 'success'
