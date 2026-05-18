@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && job.status == 'success'
         with:
-          path: "_build/html"
+          path: "docs/_build/html"
 
   deploy-book:
     needs: build-book
