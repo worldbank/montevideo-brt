@@ -1,0 +1,6 @@
+Montevideo:
+  ods_path: "../../data/montevideo_ods.csv"
+  points_path: "../../data/montevideo_points.csv"
+  mapbox_token_env_var: 'mapbox784'
+  method: "/directions-matrix/v1"
+  profile: 'mapbox/driving-traffic'
