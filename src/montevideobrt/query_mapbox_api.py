@@ -10,6 +10,7 @@ import argparse
 ODS_CSV = """od_id,od_name,origin,destination,points
 0,Troncal Cno. Maldonado - 8 de octubre,Ciudad Vieja,Zonamerica - Facultad de Veterinaria,"[0, 2]"
 1,Troncal Av. Italia,Ciudad Vieja,El Pinar,"[1, 3]"
+2,Av. 18 de Julio - Ciudad del Plata,Av. 18 de Julio (Barrio Sur),Ruta 1 Vieja (Ciudad del Plata),"[4, 5]"
 """
 
 POINTS_CSV = """id,name,latitude,longitude
@@ -17,6 +18,8 @@ POINTS_CSV = """id,name,latitude,longitude
 1,Tres Cruces,-34.89499,-56.16483
 2,Veterinaria,-34.79094,-56.0676
 3,Guenoas,-34.78994,-55.89604
+4,Av. 18 de Julio (Barrio Sur),-34.906246,-56.196546
+5,Ruta 1 Vieja (Ciudad del Plata),-34.760895,-56.401903
 """
 
 
