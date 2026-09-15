@@ -104,5 +104,13 @@ src/*/_version.py
 *.sbx
 *.shp
 *.shp.xml
+*.gpkg
+*.kmx
+*.pdf
 *.csv
-
+*.kmz
+*.gpkg-shm
+*.gpkg-wal
+*.kml
+*.qmd
+*.parquet
