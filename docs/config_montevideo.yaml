@@ -1,0 +1,16 @@
+Montevideo:
+  timezone:
+    timezone_name: 'America/Montevideo'
+  s3_path: 's3://wbg-waze/bq/UY/784montevideo/jams/2026/'
+  aws_profile: '' # your profile
+  crs:
+    projected_crs: 'EPSG:32721'
+geographies:
+    'admin2':
+      name: 'Administrative Level 2'
+      path: ''
+      plot_by_geography: True
+    'hex_id_7':
+      name: 'Hexagons Level 7'
+      path: ''
+      plot_by_geography: False
