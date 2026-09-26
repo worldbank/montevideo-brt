@@ -13,25 +13,25 @@ import r5py
 LOCAL_CRS = "EPSG:32721"
 WGS84_CRS = "EPSG:4326"
 SCENARIO_DEPARTURES = {
-    "wed_07": datetime.datetime(2026, 3, 25, 7),
+    # "wed_07": datetime.datetime(2026, 3, 25, 7),
     "wed_08": datetime.datetime(2026, 3, 25, 8),
-    "wed_09": datetime.datetime(2026, 3, 25, 9),
-    "wed_10": datetime.datetime(2026, 3, 25, 10),
-    "sat_07": datetime.datetime(2026, 3, 28, 7),
-    "sat_08": datetime.datetime(2026, 3, 28, 8),
-    "sat_09": datetime.datetime(2026, 3, 28, 9),
-    "sat_10": datetime.datetime(2026, 3, 28, 10),
+    # "wed_09": datetime.datetime(2026, 3, 25, 9),
+    # "wed_10": datetime.datetime(2026, 3, 25, 10),
+    # "sat_07": datetime.datetime(2026, 3, 28, 7),
+    # "sat_08": datetime.datetime(2026, 3, 28, 8),
+    # "sat_09": datetime.datetime(2026, 3, 28, 9),
+    # "sat_10": datetime.datetime(2026, 3, 28, 10),
 }
 
 
 def _routing_points(
-    population_path: Path,
+    zonas_path: Path,
     employment_path: Path,
 ) -> tuple[gpd.GeoDataFrame, gpd.GeoDataFrame]:
     """Read the two layers and represent each polygon by its centroid."""
 
-    population = gpd.read_file(population_path)
-    population_origins = population.rename(columns={"id_poligono": "id"})[
+    zonas = gpd.read_file(zonas_path)
+    zonas_origins = zonas.rename(columns={"id_poligono": "id"})[
         ["id", "geometry"]
     ].assign(
         geometry=lambda frame: frame.geometry.to_crs(LOCAL_CRS)
@@ -45,12 +45,12 @@ def _routing_points(
         geometry=lambda frame: frame.geometry.to_crs(LOCAL_CRS)
         .centroid.to_crs(WGS84_CRS)
     )
-    return population_origins, employment_destinations
+    return zonas_origins, employment_destinations
 
 
 def generate_matrices(
     *,
-    population_path: Path,
+    zonas_path: Path,
     employment_path: Path,
     osm_path: Path,
     feeds: list[Path],
@@ -63,13 +63,13 @@ def generate_matrices(
     unknown = sorted(set(scenarios).difference(SCENARIO_DEPARTURES))
     if unknown:
         raise ValueError(f"Unknown scenarios: {unknown}")
-    missing_inputs = [path for path in [population_path, employment_path, osm_path, *feeds] if not path.exists()]
+    missing_inputs = [path for path in [zonas_path, employment_path, osm_path, *feeds] if not path.exists()]
     if missing_inputs:
         raise FileNotFoundError(
             "Missing routing inputs: " + ", ".join(str(path) for path in missing_inputs)
         )
 
-    origins, destinations = _routing_points(population_path, employment_path)
+    origins, destinations = _routing_points(zonas_path, employment_path)
     output_dir.mkdir(parents=True, exist_ok=True)
     network = r5py.TransportNetwork(osm_path, feeds)
 
@@ -113,9 +113,9 @@ def generate_matrices(
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "--population-path",
+        "--zonas-path",
         type=Path,
-        default=Path("data/population/poblacion-zonificacion.gpkg"),
+        default=Path("data/geography-levels/zonas-montevideo-actualizadas-steer.gpkg"),
     )
     parser.add_argument(
         "--employment-path",
