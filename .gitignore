@@ -114,3 +114,4 @@ src/*/_version.py
 *.kml
 *.qmd
 *.parquet
+/data/
