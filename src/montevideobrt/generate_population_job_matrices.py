@@ -31,7 +31,7 @@ def _routing_points(
     """Read the two layers and represent each polygon by its centroid."""
 
     zonas = gpd.read_file(zonas_path)
-    zonas_origins = zonas.rename(columns={"id_poligono": "id"})[
+    zonas_origins = zonas.rename(columns={"poligono_id": "id"})[
         ["id", "geometry"]
     ].assign(
         geometry=lambda frame: frame.geometry.to_crs(LOCAL_CRS)
@@ -142,7 +142,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     generate_matrices(
-        population_path=args.population_path,
+        zonas_path=args.zonas_path,
         employment_path=args.employment_path,
         osm_path=args.osm_path,
         feeds=args.feeds,
