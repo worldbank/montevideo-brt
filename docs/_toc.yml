@@ -2,6 +2,10 @@ format: jb-book
 root: README
 
 parts:
+  - caption: Accessibility Analysis
+    numbered: True
+    chapters:
+      - file: notebooks/job_accessibility.ipynb 
   - caption: Analysis of Mapbox Data
     numbered: True
     chapters:
