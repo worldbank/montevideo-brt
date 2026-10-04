@@ -6,7 +6,17 @@ parts:
     numbered: True
     chapters:
       - file: notebooks/job_accessibility.ipynb 
+  - caption: OD Analysis
+    numbered: True
+    chapters:
+      - file: notebooks/analisis_ods.ipynb 
   - caption: Analysis of Mapbox Data
     numbered: True
     chapters:
       - file: notebooks/travel_times_brt.ipynb  
+  - caption: Anexos
+    numbered: True
+    chapters:
+      - file: notebooks/recreacion_zonas_steer.ipynb  
+      - file: notebooks/agg_a15.ipynb  
+      - file: notebooks/calculo_NBI.ipynb  
