@@ -1,16 +1,26 @@
 Montevideo:
   timezone:
     timezone_name: 'America/Montevideo'
-  s3_path: 's3://wbg-waze/bq/UY/784montevideo/jams/2026/'
-  aws_profile: '' # your profile
+  s3_path: 's3://wbg-waze/bq/UY/784montevideo/jams/20*/'
+  s3_path_alerts: 's3://wbg-waze/bq/UY/784montevideo/alerts/'
+  aws_profile: 'ddp'
   crs:
     projected_crs: 'EPSG:32721'
 geographies:
-    'admin2':
-      name: 'Administrative Level 2'
-      path: ''
-      plot_by_geography: True
-    'hex_id_7':
-      name: 'Hexagons Level 7'
-      path: ''
+    'hex_level_7':
+      agg_spatial: 'hex_id'
+      name: 'H3 level 7'
+      path: '../data/AMM_h3_level7_.gpkg'
       plot_by_geography: False
+    'hex_level_10':
+      agg_spatial: 'hex_id_10'
+      name: 'H3 level 10'
+      path: '../data/main_roads_level10.gpkg'
+      plot_by_geography: False
+    # 'zona-steer':
+    #   name: 'Zonas Steer'
+    #   path: '../data/zonas-steer.gpkg'
+    #   plot_by_geography: False
+
+
+
