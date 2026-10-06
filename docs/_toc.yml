@@ -15,8 +15,9 @@ parts:
     chapters:
       - file: notebooks/travel_times_brt.ipynb  
   - caption: Anexos
-    numbered: True
+    numbered: True 
     chapters:
       - file: notebooks/recreacion_zonas_steer.ipynb  
       - file: notebooks/agg_a15.ipynb  
+      - file: notebooks/zonas_poblacion_agg.ipynb
       - file: notebooks/calculo_NBI.ipynb  
