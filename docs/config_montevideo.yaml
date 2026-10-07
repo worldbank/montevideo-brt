@@ -10,12 +10,12 @@ geographies:
     'hex_level_7':
       agg_spatial: 'hex_id'
       name: 'H3 level 7'
-      path: '../data/AMM_h3_level7_.gpkg'
+      path: '../data/geography-levels/AMM_h3_level7_.gpkg'
       plot_by_geography: False
     'hex_level_10':
       agg_spatial: 'hex_id_10'
       name: 'H3 level 10'
-      path: '../data/main_roads_level10.gpkg'
+      path: '../data/geography-levels/main_roads_level10.gpkg'
       plot_by_geography: False
     # 'zona-steer':
     #   name: 'Zonas Steer'
