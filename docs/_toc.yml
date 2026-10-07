@@ -10,6 +10,12 @@ parts:
     numbered: True
     chapters:
       - file: notebooks/analisis_ods.ipynb 
+  - caption: Waze Analysis
+    numbered: True
+    chapters:
+      - file: notebooks/reporte-waze-abr.ipynb 
+      - file: notebooks/congestion-calles.ipynb
+      - file: notebooks/accidentes.ipynb 
   - caption: Analysis of Mapbox Data
     numbered: True
     chapters:
