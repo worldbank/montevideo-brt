@@ -2,26 +2,30 @@ format: jb-book
 root: README
 
 parts:
-  - caption: Accessibility Analysis
-    numbered: True
+  - caption: Área de estudio
+    numbered: False
+    chapters:
+      - file: notebooks/area_de_estudio.ipynb
+  - caption: Análisis de Accesibilidad
+    numbered: False
     chapters:
       - file: notebooks/job_accessibility.ipynb 
-  - caption: OD Analysis
-    numbered: True
+  - caption: Análisis O-D
+    numbered: False
     chapters:
       - file: notebooks/analisis_ods.ipynb 
-  - caption: Waze Analysis
-    numbered: True
+  - caption: Análisis de Waze
+    numbered: False
     chapters:
       - file: notebooks/reporte-waze-abr.ipynb 
       - file: notebooks/congestion-calles.ipynb
       - file: notebooks/accidentes.ipynb 
-  - caption: Analysis of Mapbox Data
-    numbered: True
+  - caption: Análisis de Datos de Mapbox
+    numbered: False
     chapters:
       - file: notebooks/travel_times_brt.ipynb  
   - caption: Anexos
-    numbered: True 
+    numbered: False 
     chapters:
       - file: notebooks/recreacion_zonas_steer.ipynb  
       - file: notebooks/agg_a15.ipynb  
