@@ -30,7 +30,7 @@ Cobertura temporal de los datos:
    cd montevideo-brt
    ```
 
-2. Crea y activa el entorno de conda:
+2. Cree y active el entorno de conda:
    ```bash
    conda env create -f environment.yml
    conda activate montevideo-brt
@@ -41,7 +41,7 @@ Cobertura temporal de los datos:
 Para consultar la documentación detallada y los notebooks de análisis, visita la [documentación del proyecto](https://legendary-dollop-k53e1zj.pages.github.io/README.html).
 
 
-## Contact
+## Contacto
 
 Para consultas, comentarios o contribuciones, póngase en contacto con el Development Data Partnership a través de datapartnership@worldbank.org.
 
