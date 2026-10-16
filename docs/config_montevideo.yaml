@@ -3,7 +3,7 @@ Montevideo:
     timezone_name: 'America/Montevideo'
   s3_path: 's3://wbg-waze/bq/UY/784montevideo/jams/20*/'
   s3_path_alerts: 's3://wbg-waze/bq/UY/784montevideo/alerts/'
-  aws_profile: 'ddp'
+  aws_profile: '' # your profile
   crs:
     projected_crs: 'EPSG:32721'
 geographies:
