@@ -1,6 +1,6 @@
 # Proyecto Montevideo BRT
 
-Este repositorio analiza la movilidad urbana en el Área Metropolitana de Montevideo y sus alrededores. Utilizando datos provistos por Kido Dynamics, Waze y Mapbox a través del [Development Data Partnership](portal.datapartnership.org/home), se evaluaron la movilidad de personas entre zonas del área de estudio, los embotellamientos y siniestros viales, y los tiempos de viaje para pares O-D de interés.
+Este repositorio analiza la movilidad urbana en el Área Metropolitana de Montevideo y sus alrededores. Utilizando datos provistos por Kido Dynamics, Waze y Mapbox a través del [Development Data Partnership](portal.datapartnership.org/home). Se evaluaron la movilidad de personas entre zonas del área de estudio, los embotellamientos y siniestros viales, y los tiempos de viaje para pares O-D de interés.
 
 Para complementar el análisis, se utilizaron datos del Censo 2023 y se estimó el índice de Necesidades Básicas Insatisfechas (NBI) para evaluar niveles de accesibilidad.
 
