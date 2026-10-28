@@ -1,6 +1,6 @@
 # Proyecto Montevideo BRT
 
-Este repositorio analiza la movilidad urbana en el Área Metropolitana de Montevideo y sus alrededores. Utilizando datos provistos por Kido Dynamics, Waze y Mapbox a través del [Development Data Partnership](portal.datapartnership.org/home). Se evaluaron la movilidad de personas entre zonas del área de estudio, los embotellamientos y siniestros viales, y los tiempos de viaje para pares O-D de interés.
+Este repositorio analiza la movilidad urbana en el Área Metropolitana de Montevideo y sus alrededores. Utilizando datos provistos por Kido Dynamics, Waze y Mapbox a través del [Development Data Partnership](portal.datapartnership.org/home), se evaluaron la movilidad de personas entre zonas del área de estudio, los embotellamientos y siniestros viales, y los tiempos de viaje para pares O-D de interés.
 
 Para complementar el análisis, se utilizaron datos del Censo 2023 y se estimó el índice de Necesidades Básicas Insatisfechas (NBI) para evaluar niveles de accesibilidad.
 
@@ -30,15 +30,12 @@ Cobertura temporal de los datos:
    cd montevideo-brt
    ```
 
-2. Cree y active el entorno de conda:
-   ```bash
-   conda env create -f environment.yml
-   conda activate montevideo-brt
-   ```
+2. Configure un entorno de Python utilizando la herramienta de su preferencia.
+3. Instale las dependencias necesarias para ejecutar los notebooks que quiera utilizar.
 
 ### Uso
 
-Para consultar la documentación detallada y los notebooks de análisis, visita la [documentación del proyecto](https://legendary-dollop-k53e1zj.pages.github.io/README.html).
+Para consultar la documentación detallada y los notebooks de análisis, visita la [documentación del proyecto](https://worldbank.github.io/montevideo-brt/).
 
 
 ## Contacto
@@ -53,4 +50,4 @@ The World Bank Data Lab <span style="color:#3EACAD">template</span> used to crea
 
 ## License
 
-This project is licensed under the MIT License together with the [World Bank IGO Rider](https://github.com.mcas.ms/worldbank/.github/blob/main/WB-IGO-RIDER.md). The Rider is purely procedural: it reserves all privileges and immunities enjoyed by the World Bank, without adding restrictions to the MIT permissions. Please review both files before using, distributing or contributing.
+This project is licensed under the MIT License together with the [World Bank IGO Rider](https://github.com/worldbank/.github/blob/main/WB-IGO-RIDER.md). The Rider is purely procedural: it reserves all privileges and immunities enjoyed by the World Bank, without adding restrictions to the MIT permissions. Please review both files before using, distributing or contributing.
