@@ -57,7 +57,7 @@ class Mapbox:
 
         url = f"{self.BASE_URL}{method}/{profile}/{coordinates}"
 
-        response = requests.get(url, params=params, verify=False)
+        response = requests.get(url, params=params)
         response.raise_for_status()
 
         return response
