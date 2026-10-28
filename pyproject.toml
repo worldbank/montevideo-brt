@@ -4,11 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "montevideobrt"
-description = "A template Python package from the World Bank Data Lab"
+description = "Análisis de movilidad urbana, congestión y tiempos de viaje en el Área Metropolitana de Montevideo"
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { file = "LICENSE" }
 keywords = ["template", "reproducibility"]
-authors = [{ name = "Development Data Group", email = "datalab@worldbank.org" }]
+authors = [{ name = "Development Data Partnership", email = "datapartnership@worldbank.org" }]
 classifiers = [
 	"Programming Language :: Python :: 3",
 	"Programming Language :: Python :: 3.7",
@@ -17,7 +17,7 @@ classifiers = [
 	"Programming Language :: Python :: 3.10",
 	"Programming Language :: Python :: 3.11",
 	"Programming Language :: Python :: 3 :: Only",
-	"License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+	"License :: OSI Approved :: MIT License",
 	"Operating System :: OS Independent",
 	"Intended Audience :: Developers",
 	"Topic :: Scientific/Engineering",
@@ -38,9 +38,9 @@ docs = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/worldbank/template"
-"Bug Reports" = "https://github.com/worldbank/template/issues"
-"Source" = "https://github.com/worldbank/template"
+"Homepage" = "https://github.com/worldbank/montevideo-brt"
+"Bug Reports" = "https://github.com/worldbank/montevideo-brt/issues"
+"Source" = "https://github.com/worldbank/montevideo-brt"
 
 [tool.codespell]
 skip = 'docs/_build,docs/bibliography.bib,*.png,*.gz,*.whl'
